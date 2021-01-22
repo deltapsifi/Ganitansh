@@ -5,6 +5,7 @@ Ganitansh was my first 'real' team high school project. We made this for Toycath
 **We believe that no disability can stop someone to explore the magic of maths.**    
 
 ![](https://github.com/Zeus-HackOlympus/Ganitansh/blob/main/Screenshots/Welcome-Screen.png)
+##
 ![](https://github.com/Zeus-HackOlympus/Ganitansh/blob/main/Screenshots/Graph.png)
 
 #### I am a beginner in Git. If there is any problem. Please drop a pull request
@@ -31,9 +32,6 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## Screenshots of the program
-
-![]()
 
 ## To be added
 The one major thing that we are planning to add in ***Ganitansh*** is a **GUI** interface. At present we don't know how to, therefore learning to do so ;) 
