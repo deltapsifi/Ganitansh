@@ -4,6 +4,8 @@ Ganitansh was my first 'real' team high school project. We made this for Toycath
 
 **We believe that no disability can stop someone to explore the magic of maths.**    
 
+In between the code a lot of funtions are commented. We are working on them.
+
 ![](https://github.com/Zeus-HackOlympus/Ganitansh/blob/main/Screenshots/Welcome-Screen.png)
 ##
 ![](https://github.com/Zeus-HackOlympus/Ganitansh/blob/main/Screenshots/Graph.png)
