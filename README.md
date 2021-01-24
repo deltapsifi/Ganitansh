@@ -2,7 +2,7 @@
 
 Ganitansh was my first 'real' team high school project. We made this for Toycathon 2021. Our aim was to deliver magic of maths to all kinds of people. 
 
-*Ganitansh is a term derived from 2 words: Ganit and ansh. Ganit means maths in Hindi and ansh means a part in Hindi. So ganitansh means a part of maths*
+*Ganitansh is a term derived from 2 words: Ganit and ansh. Ganit means maths and ansh means a part in Hindi. So ganitansh means a part of maths*
 
 **We believe that no disability can stop someone to explore the magic of maths.**    
 
