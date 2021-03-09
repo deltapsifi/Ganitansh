@@ -157,19 +157,21 @@ def elev():
     while True:
         for ii in range(4):
             no3 = floor(random.uniform(11, 100))
-            print( Back.BLACK + Fore.MAGENTA +  'Find the product when', no3,'is multiplied by 111')
+            lol = int(input('Enter how many digits of 1 you want in the multiplier: '))
+            r = '1'*lol
+            print( Back.BLACK + Fore.MAGENTA +  'Find the product when', no3,'is multiplied by', int(r))
             eng.say('Find the product when')
             eng.runAndWait()
             eng.say(no3)
             eng.runAndWait()
-            eng.say('is multiplied by 111')
+            eng.say('is multiplied by', int(r))
             eng.runAndWait()
             eng.say('Enter the answer. If you dont know just press enter: ')
             eng.runAndWait()
             ans = input("Enter the answer. If you dont know just press enter:")
             # t = Timer(60, time_up) # x is amount of allowed time in seconds then execute the provided function
             # t.start() #start the timer
-            rgtans = no3 * 111
+            rgtans = no3 * int(r)
             if ans == str(rgtans):
                 # t.cancel()
                 scr1 += 1
