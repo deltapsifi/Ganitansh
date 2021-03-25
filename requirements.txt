@@ -37,3 +37,5 @@ sympy==1.7.1
 traitlets==5.0.5
 wcwidth==0.2.5
 opencv-python
+pyaudio
+speechrecognition
