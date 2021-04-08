@@ -13,32 +13,32 @@ from threading import Timer
 from colorama import Fore, Back, Style, init
 import cv2
 
+#def story():
 
 
 
-def story():
-
-
-
+def speak(text):
+    eng.say(text)
+    eng.runandwait()
 
 
 
 def basic():
     print(Back.BLACK + Fore.RED + 'This will include questions that are to be solved using Vedic Maths in a given time limit')
     print(Fore.RED+Back.BLACK+'These will help you develop your speed of calculation')
-    eng.say('This will include questions that are to be solved using Vedic Maths in a given time limit and they will help you develop your speed of calculation')
-    eng.runAndWait()
+    speak('This will include questions that are to be solved using Vedic Maths in a given time limit and they will help you develop your speed of calculation')
     print(Fore.BLUE + Back.BLACK+'You will have 60 seconds to attempt each question')
-    eng.say('You will have 60 seconds to attempt each question')
-    eng.runAndWait()
+    speak('You will have 60 seconds to attempt each question')
     while True:
         time.sleep(1)
         print(Fore.GREEN + Back.BLACK + """1 --> Double Digit Multiplication
          2 --> Multiplication of a two-digit number by 11
          3--> Finding square of double digit numbers ending with 5
          4 --> Go Back""")
-        eng.say('Type one of the following options. 1 Double Digit Multiplication; 2 Multiplication by number of the form 11; 3 Go Back')
-        eng.runAndWait()
+        speak('Type one of the following options. 1 Double Digit Multiplication; 2 Multiplication by number of the form 11; 3 Go Back')
+        
+        print(Fore.GREEN + Back.BLACK + "1 --> Double Digit Multiplication; 2 --> Multiplication of a two-digit number by 11... ; 3 --> Go Back")
+        speak('Type one of the following options. 1 Double Digit Multiplication; 2 Multiplication by number of the form 11; 3 Go Back')
         print( Fore.GREEN + Back.BLACK +"Choose one of the following options.")
         choice = int(input())
         if choice== 1: dd()
@@ -48,40 +48,33 @@ def basic():
 
 def dd():
     print(Back.BLACK +'Do you know about various tricks which are given by Vedic Maths?')
-    eng.say('Do you know about various tricks which are given by Vedic Maths?')
-    eng.runAndWait()
+    speak('Do you know about various tricks which are given by Vedic Maths?')
     print(Fore.RED + Back.BLACK + """
-    We are going to learn about one of the basic rules of vedic maths.""" + Fore.BLUE + Back.BLACK + """
-    This involves multiplication of two digit numbers.
-    Say you have any two digit numbers : ab and cd, where a is in tenth place of number "ab" and b is in ones place, similarly for "cd".
-    So the trick is to take the ones digit of both numbers and multiply it (i.e. b x d) and write the ones digit of their product as the ones digit of a new number.
-    And carry forward the tens place digit.""" )
+We are going to learn about one of the basic rules of vedic maths.""" + Fore.BLUE + Back.BLACK + """
+This involves multiplication of two digit numbers.
+Say you have any two digit numbers : ab and cd, where a is in tenth place of number "ab" and b is in ones place, similarly for "cd".
+So the trick is to take the ones digit of both numbers and multiply it (i.e. b x d) and write the ones digit of their product as the ones digit of a new number.
+And carry forward the tens place digit.
+""" )
     print(Fore.GREEN + """
-    Now take the product of "a" and "d" and add it to the product of "b" and "c" (i.e. a x d + b x c).
-    Now you need to add the tens place digit of the number obtained on multiplying "b" and "d".
-    now take the ones place digit of the number obtained and put it in the tens place of the number and carry forward the tens place digit.
-    Now multiply a and c (i.e. a x c) and add the tens place digit that was obtained in the previous step, now write the obtained number in the hundreds place of the new number.
-    The number that you have now obtained is the product of ab and cd.)""")
+Now take the product of "a" and "d" and add it to the product of "b" and "c" (i.e. a x d + b x c).
+Now you need to add the tens place digit of the number obtained on multiplying "b" and "d".
+now take the ones place digit of the number obtained and put it in the tens place of the number and carry forward the tens place digit.
+Now multiply a and c (i.e. a x c) and add the tens place digit that was obtained in the previous step, now write the obtained number in the hundreds place of the new number.
+The number that you have now obtained is the product of ab and cd.)
+""")
 
-    eng.say("We are going to learn about one of the basic rules of vedic maths.")
-    eng.runAndWait()
-    eng.say("This involves multiplication of two digit numbers.")
-    eng.say("Say you have any two digit numbers : ab and cd, where a is in tenth place of number 'ab' and b is in ones place, similarly for 'cd'.")
-    eng.runAndWait()
-    eng.say("So the trick is to take the ones digit of both numbers and multiply it (i.e. b x d) and write the ones digit of their product as the ones digit of a new number.")
-    eng.runAndWait()
-    eng.say("And carry forward the tens place digit.")
-    eng.runAndWait()
-    eng.say("Now take the product of 'a' and 'd' and add it to the product of 'b' and 'c'")
-    eng.runAndWait()
-    eng.say("Now you need to add the tens place digit of the number obtained on multiplying 'b' and 'd'.")
-    eng.runAndWait()
-    eng.say("now take the ones place digit of the number obtained and put it in the tens place of the number and carry forward the tens place digit.")
-    eng.runAndWait()
-    eng.say("Now multiply a and c and add the tens place digit that was obtained in the previous step, now write the obtained number in the hundreds place of the new number.")
-    eng.runAndWait()
-    eng.say("The number that you have now obtained is the product of a b and c d.")
-    eng.runAndWait()
+    speak("We are going to learn about one of the basic rules of vedic maths.")
+    speak("This involves multiplication of two digit numbers.")
+    speak("Say you have any two digit numbers : ab and cd, where a is in tenth place of number 'ab' and b is in ones place, similarly for 'cd'.")
+    speak("So the trick is to take the ones digit of both numbers and multiply it (i.e. b x d) and write the ones digit of their product as the ones digit of a new number.")
+    speak("And carry forward the tens place digit.")
+    speak("Now take the product of 'a' and 'd' and add it to the product of 'b' and 'c'")
+    speak("Now you need to add the tens place digit of the number obtained on multiplying 'b' and 'd'.")
+    speak("now take the ones place digit of the number obtained and put it in the tens place of the number and carry forward the tens place digit.")
+    speak("Now multiply a and c and add the tens place digit that was obtained in the previous step, now write the obtained number in the hundreds place of the new number.")
+    speak("The number that you have now obtained is the product of a b and c d.")
+    
 
     time.sleep(1)
     print()
@@ -91,16 +84,12 @@ def dd():
             no1 = floor(random.uniform(10, 99))
             no2 = floor(random.uniform(10, 99))
             print( Style.DIM +'Find the product when',no1,'is multiplied by',no2)
-            eng.say('Find the product on multiplication of: ')
-            eng.runAndWait()
-            eng.say(no1)
-            eng.runAndWait()
-            eng.say('and')
-            eng.runAndWait()
-            eng.say(no2)
-            eng.runAndWait()
-            eng.say("Enter the answer . If you don't know just press enter")
-            eng.runAndWait()
+            speak('Find the product on multiplication of: ')
+            speak(no1)
+            speak('and')
+            speak(no2)
+            speak("Enter the answer . If you don't know just press enter")
+            
             right_answer = no1 * no2
             #t= Timer(60, time_up) #x is amount of allowed time in seconds then execute the provided function
             #t.start() #start the timerx = np.linspace(-2,2,100)
@@ -109,21 +98,18 @@ def dd():
                 #t.cancel()
                 scr += 1
                 print( Fore.GREEN +'Well Done! Your answer is correct')
-                eng.say('Well Done! Your answer is correct')
-                eng.runAndWait()
+                speak('Well Done! Your answer is correct')
+                
             elif ans == "":
                 #t.cancel()
                 print(Back.BLACK + "The correct answer is {}".format(right_answer))
-                eng.say("The correct answer is {}".format(right_answer))
-                eng.runAndWait()
+                speak("The correct answer is {}".format(right_answer))
             elif ans != str(right_answer):
                 #t.cancel()
                 print(Back.BLACK + 'Sorry, incorrect answer')
-                eng.say('Sorry, incorrect answer')
-                eng.runAndWait()
+                speak('Sorry, incorrect answer')
                 print(Back.BLACK + 'The correct answer is {}'.format(no1 * no2))
-                eng.say('The correct answer is {}'.format(no1 * no2))
-                eng.runAndWait()
+                speak('The correct answer is {}'.format(no1 * no2))
             print()
         break
     print("You got {} questions right out of 4".format(scr))
@@ -223,8 +209,7 @@ def ci():
 
 def elev():
     print(Back.BLACK +'Do you know about various tricks which are given by Vedic Maths?')
-    eng.say('Do you know about various tricks which are given by Vedic Maths?')
-    eng.runAndWait()
+    speak('Do you know about various tricks which are given by Vedic Maths?')
     print( Fore.RED + Back.BLACK +"""
     We will learn about the a trick to ease our calculations when we multiply any 2-digit number by 11.
     When we multiply a 2-digit number for example-43 by 11,using the trick the answer comes out to be 473.
@@ -237,7 +222,7 @@ def elev():
     But as we proceed with the 2nd step,the sum of multiplicants (6+7) is 13.So, we put the ones digit(3) at tens place
     and tens digit(1) will be added to the hundreds digit of the answer(6+1)37.
     """)
-    eng.say('''We will learn about the a trick to ease our calculations when we multiply any 2-digit number by 11.
+    speak('''We will learn about the a trick to ease our calculations when we multiply any 2-digit number by 11.
     When we multiply a 2-digit number for example-43 by 11,using the trick the answer comes out to be 473.
     Let us see how,
     The tens digit(4) of the multiplicant is placed at hundreds place of the product and ones digit (3) of
@@ -247,10 +232,8 @@ def elev():
     Here, we will proceed with same steps, the answer will be 737.
     But as we proceed with the 2nd step,the sum of multiplicants (6+7) is 13.So, we put the ones digit(3) at tens place
     and tens digit(1) will be added to the hundreds digit of the answer(6+1)37.''')
-    eng.runAndWait()
     time.sleep(4)
-    eng.say('Let\'s Practice')
-    eng.runAndWait()
+    speak('Let\'s Practice')
     print( Fore.GREEN +"Let's Practice")
     time.sleep(2)
     scr1 = 0
@@ -260,14 +243,10 @@ def elev():
             lol = int(input('Enter how many digits of 1 you want in the multiplier: '))
             r = '1'*lol
             print( Back.BLACK + Fore.MAGENTA +  'Find the product when', no3,'is multiplied by', int(r))
-            eng.say('Find the product when')
-            eng.runAndWait()
-            eng.say(no3)
-            eng.runAndWait()
-            eng.say('is multiplied by', int(r))
-            eng.runAndWait()
-            eng.say('Enter the answer. If you dont know just press enter: ')
-            eng.runAndWait()
+            speak('Find the product when')
+            speak(no3)
+            speak('is multiplied by', int(r))
+            speak('Enter the answer. If you dont know just press enter: ')
             ans = input("Enter the answer. If you dont know just press enter:")
             # t = Timer(60, time_up) # x is amount of allowed time in seconds then execute the provided function
             # t.start() #start the timer
@@ -276,22 +255,18 @@ def elev():
                 # t.cancel()
                 scr1 += 1
                 print( Back.BLACK + 'Well Done! Your answer is correct')
-                eng.say('Well Done! Your answer is correct')
-                eng.runAndWait()
+                speak('Well Done! Your answer is correct')
             elif ans == "":
                 print( Back.BLACK + "The correct answer is {}".format(rgtans))
-                eng.say("The correct answer is {}".format(rgtans))
-                eng.runAndWait()
+                speak("The correct answer is {}".format(rgtans))
+                
             elif ans != str(rgtans) :
                 # t.cancel()
                 print( Fore.RED +'Your answer is incorrect')
-                eng.say('Your answer is incorrect')
-                eng.runAndWait()
+                speak('Your answer is incorrect')
                 print( Fore.GREEN + 'The correct answer is', rgtans)
-                eng.say('The correct answer is')
-                eng.runAndWait()
-                eng.say(rgtans)
-                eng.runAndWait()
+                speak('The correct answer is')
+                speak(rgtans)
 
 
 
@@ -536,18 +511,18 @@ def sqr5():
 
 def cg():
     print("Do you know about the method to calculate the coordinates of any point dividing a line in a particular ratio?")
-    eng.say("Do you know about the method to calculate the coordinates of any point dividing a line in a particular ratio?")
+    speak("Do you know about the method to calculate the coordinates of any point dividing a line in a particular ratio?")
     time.sleep(2)
     print("""Consider a line with the coordinates of the end points as (x1, y1) and (x2, y2), which is divided in a ratio m:n by a point (x3, y3).
     Now there is a formula known as the section formula :- x3 = (m*x2 + n*x1)/(m + n), similarly in order to find y3 just replace "x" with "y".
     """)
-    eng.say("""Consider a line with the coordinates of the end points as (x1, y1) and (x2, y2), which is divided in a ratio m:n by a point (x3, y3).
+    speak("""Consider a line with the coordinates of the end points as (x1, y1) and (x2, y2), which is divided in a ratio m:n by a point (x3, y3).
     Now there is a formula known as the section formula :- x3 = (m*x2 + n*x1)/(m + n), similarly in order to find y3 just replace "x" with "y".
     """)
     print(Back.BLACK + "These questions will test your basic knowledge of Coordinate Geometry more specifically the section formula")
     print(Back.BLACK + "The coordinates of the two end points and the ratio with which the line is internally divided will be given")
     print(Back.BLACK + "You have to find the coordinates of the point which divides the line internally in the given ratio")
-    eng.say('These questions will test your basic knowledge of Coordinate Geometry more specifically the section formula. The coordinates of the two end points and the ratio with which the line is internally divided will be given. You have to find the coordinates of the point which divides the line internally in the given ratio')
+    speak('These questions will test your basic knowledge of Coordinate Geometry more specifically the section formula. The coordinates of the two end points and the ratio with which the line is internally divided will be given. You have to find the coordinates of the point which divides the line internally in the given ratio')
     scr3 = 0
     while True:
         for i2 in range(4):
@@ -572,15 +547,15 @@ def cg():
                 t.cancel()
                 scr3 += 1
                 print( Fore.GREEN + 'Good Job! Your answer is correct')
-                eng.say('Good Job! Your answer is correct')
-                eng.runAndWait()
+                speak('Good Job! Your answer is correct')
+                
             else :
                 t.cancel()
                 print( Style.DIM + 'Your answer is incorrect')
-                eng.say('Your answer is incorrect')
+                speak('Your answer is incorrect')
                 print( Fore.YELLOW + 'The correct answer is, x coordinate = {} and y coordinate = {}'.format(kaw, koo))
-                eng.say('The correct answer is, x coordinate = {} and y coordinate = {}'.format(kaw, koo))
-                eng.runAndWait()
+                speak('The correct answer is, x coordinate = {} and y coordinate = {}'.format(kaw, koo))
+                
             print()
             time.sleep(1)
         break
@@ -637,14 +612,20 @@ def calculus():
             l.remove(op2)
             op3 = random.choice(l)
             print( Back.BLACK + "Find the derivative of f(x) =" ,expression)
-            eng.say("Find the derivative of f(x) =" ,expression)
-            eng.runAndWait()
+            speak("Find the derivative of f(x) =" ,expression)
+            
             print( Fore.CYAN + "Choose the correct option. If you don't know just press enter")
+
             print(Back.BLACK +'1 -->', op1)
             print(Back.BLACK +'2 -->', op2)
             print(Back.BLACK +'3 -->', op3)
-            eng.say("Choose the correct option. If you don't know just press enter")
-            eng.runAndWait()
+            speak("Choose the correct option. If you don't know just press enter")
+            
+
+            print(Back.BLACK +'1 -->', op1, '; 2 -->', op2, '; 3 -->', op3)
+            speak("Choose the correct option. If you don't know just press enter")
+            
+
             it = input()
             if it == "1":
                 annn = op1
@@ -661,14 +642,14 @@ def calculus():
               #  t.cancel()
                 scr4 += 1
                 print('Good Job! your answer is correct')
-                eng.say('Good Job! your answer is correct')
-                eng.runAndWait()
+                speak('Good Job! your answer is correct')
+                
             else:
                # t.cancel()
                 print('Sorry, incorrect answer')
                 print("The correct answer is", diff(expression))
-                eng.say('Sorry, incorrect answer')
-                eng.runAndWait()
+                speak('Sorry, incorrect answer')
+                
             print()
             time.sleep(1)
         break
@@ -765,8 +746,8 @@ def evd():
 
 
 def into():
-    eng.say("Do you know what an algebric equation is ")
-    eng.runAndWait()
+    speak("Do you know what an algebric equation is ")
+    
     intro_ques = input("Do you know what an algebric equation is (yes/no): ")
     if intro_ques == "yes":
         print( Style.DIM + "Ok then lets directly move to visualsing linear equations")
@@ -775,10 +756,10 @@ def into():
 
     if  intro_ques == "no":
         print( Fore.GREEN+ "well its basically just a simple equation with variables")
-        eng.say("well its basically just a simple equation with variables")
-        eng.runAndWait()
-        eng.say("Do you know what variables are")
-        eng.runAndWait()
+        speak("well its basically just a simple equation with variables")
+        
+        speak("Do you know what variables are")
+        
         intro_ques1 = input("Do you know what variables are (yes/no): ")
         if intro_ques1 == "no":
             print( Back.BLACK + """
@@ -788,40 +769,38 @@ def into():
             and he says that he has "some" apples now how can we define that "some" we don't have any definate to put in the place
             of "some" so "some" is a variable quantity it can be 2,3,4,5.... anything.
              """)
-            eng.say("In simple terms variables is something whose value can't change.")
-            eng.say("""Let me explain you this in simpler terms for
+            speak("In simple terms variables is something whose value can't change.")
+            speak("""Let me explain you this in simpler terms for
             example Ram has 5 apples. Now if he will never eat those apples the quantity of those apples will never change
             Those apples are 5 and will remain 5 untill someone eats them. So here we have a constant 5 But now Shyam comes
             and he says that he has "some" apples now how can we define that "some" we don't have any definate to put in the place
             of "some". So "some" is a variable quantity it can be 2,3,4,5.... anything.
             """ )
-            eng.runAndWait()
             print( Back.BLACK + """Now if we ask ourself,how we can we identify variables,
             well just ask yourself, can we define that particular value? if yes then it's a constant else a variable""")
-            eng.say("Now if we ask ourself,how we can we identify variables, well just ask yourself, can we define that particular value? if yes then it's a constant else a variable")
-            eng.runAndWait()
+            speak("Now if we ask ourself,how we can we identify variables, well just ask yourself, can we define that particular value? if yes then it's a constant else a variable")
+            
             print(Fore.CYAN + "Lets move to ")
-            eng.say("Lets move to")
-            eng.runAndWait()
+            speak("Lets move to")
+            
             print("examples of linear equations. :")
-            eng.say("examples of linear equations. ")
-            eng.runAndWait()
+            speak("examples of linear equations. ")
+   
             ln_examples = cv2.imread('Types-of-linear-equation.png',1)
             not_ln_examples = cv2.imread('not-linear-equations.png',1)
 
             cv2.imshow("Types-of-linear-equation",ln_examples)
             k = cv2.waitKey(33)
             print("These are the examples of types of linear equation. The window will automatically after 6 seconds ")
-            eng.say("These are the examples of types of linear equation. The window will close automatically after 6 seconds")
-            eng.runAndWait()
+            speak("These are the examples of types of linear equation. The window will close automatically after 6 seconds")
+            
             time.sleep(6)
             cv2.destroyWindow("Types-of-linear-equation")
 
             cv2.imshow("Not linear equations",not_ln_examples)
             k = cv2.waitKey(33)
             print("They are not linear equation. The window will close automatically after 6 seconds")
-            eng.say("They are not linear equation. The window will close automatically after 6 seconds")
-            eng.runAndWait()
+            speak("They are not linear equation. The window will close automatically after 6 seconds")
             time.sleep(6)
             cv2.destroyWindow("Not linear equations")
 
@@ -834,7 +813,7 @@ def img():
     cv2.imshow("How to get coordinates of linear equation",graph_table)
     k = cv2.waitKey(33)
     print("This table explains, how we have to find coordinates. The window will close automatically after 6 seconds")
-    eng.say("This table explains, how we have to find coordinates. The window will close automatically after 6 seconds")
+    speak("This table explains, how we have to find coordinates. The window will close automatically after 6 seconds")
     time.sleep(6)
     cv2.destroyWindow("How to get coordinates of linear equation")
 
@@ -843,19 +822,19 @@ def img():
 
 def visualise_eqn1():
     print( Back.BLACK + "Lets say if we want a graph of y = 2x+3. How to make that ?")
-    eng.say("Lets say if we want a graph of y = 2x+3. How to make that ?")
+    speak("Lets say if we want a graph of y = 2x+3. How to make that ?")
 
 
     print( Fore.YELLOW + """
     we basically see variation in x with respect to y. This means that we put y = 2x+3 and we will put random value to x like 1,2,3,4 .... and will see what is the value of y.
     When y becomes 0 we say that the equation satisfies and we have a zero for that equation.
     """)
-    eng.say("we basically see variation in x with respect to y. This means that we put y = 2x+3 and we will put random value to x like 1,2,3,4 .... and will see what is the value of y. When y becomes 0 we say that the equation satisfies and we have a zero for that equation.")
-    eng.runAndWait()
+    speak("we basically see variation in x with respect to y. This means that we put y = 2x+3 and we will put random value to x like 1,2,3,4 .... and will see what is the value of y. When y becomes 0 we say that the equation satisfies and we have a zero for that equation.")
+    
     img()
 
     print("So we plot using these points/coordinates we found i.e. (0,3), (1,5), (2,7) and (3,9). We join these points and we get the graph of the equation")
-    eng.say("So we plot using these points/coordinates we found that is 0 comma 3  1 comma 5  2 comma 7  and 3 comma 9 . We join these points to get the graph of the equation")
+    speak("So we plot using these points/coordinates we found that is 0 comma 3  1 comma 5  2 comma 7  and 3 comma 9 . We join these points to get the graph of the equation")
 
 def visualise_eqn2():
     x = np.linspace(-2,2,100)
@@ -889,13 +868,13 @@ def visualise_eqn2():
     print(Fore.RED + """
     The orange dot represents the zero of the linear equation here the value of whole equation becomes 0 the blue dot just represents
     the point where the line intersects with Y axis. After you have viewed the program please close it to move forward""")  # explain how to find zeros theoretically
-    eng.say("The orange dot represents the zero of the linear equation here the value of whole equation becomes 0 the blue dot just represents the point where the line intersects with Y axis.After you have viewed the program please close it to move forward")
-    eng.runAndWait()
+    speak("The orange dot represents the zero of the linear equation here the value of whole equation becomes 0 the blue dot just represents the point where the line intersects with Y axis.After you have viewed the program please close it to move forward")
+    
     img = cv2.imread("GRAPH.jpeg",1)
     cv2.imshow("GRAPH.jpeg",img)
     print("This is how the graph will look like. The window will close automatically after 6 seconds")
-    eng.say("This is how the graph will look like. The window will close automatically after 6 seconds")
-    eng.runAndWait()
+    speak("This is how the graph will look like. The window will close automatically after 6 seconds")
+    
     k = cv2.waitKey(33)
     time.sleep(6)
     cv2.destroyWindow("GRAPH.jpeg")
@@ -955,8 +934,8 @@ def time_up():
     arr = [option1, option2, optimize]
     r = random.choice(arr)
     print(r)
-    eng.say(r)
-    eng.runAndWait()
+    speak(r)
+    
 
 def welcome():
     print(Fore.CYAN+Back.BLACK+
@@ -1007,6 +986,7 @@ def main():
             evd()
         if c == 5
             print( Fore.RED +  'You have successfully exited the game.')
+            speak("exit")
             break
 
 if __name__ == '__main__':
